@@ -1,0 +1,15 @@
+import { createRouter, createWebHistory } from 'vue-router'
+import LoginView from '../views/LoginView.vue'
+import FeedView from '../views/FeedView.vue'
+import ProfileView from '../views/ProfileView.vue'
+
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes: [
+    { path: '/', component: LoginView },
+    { path: '/feed', component: FeedView },
+    { path: '/profile/:id', component: ProfileView }
+  ]
+})
+
+export default router
